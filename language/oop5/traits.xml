@@ -235,6 +235,15 @@ class Aliased_Talker {
         B::bigTalk as talk;
     }
 }
+
+$talker = new Talker();
+echo $talker->smallTalk(); // b
+echo $talker->bigTalk();  // A
+
+$aliasedTalker = new Aliased_Talker();
+echo $aliasedTalker->smallTalk(); // b
+echo $aliasedTalker->bigTalk(); // A 
+echo $aliasedTalker->talk(); // B
 ?>
 ]]>
     </programlisting>
